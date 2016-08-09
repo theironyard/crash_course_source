@@ -1,0 +1,186 @@
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  background-image: url(img/tex.png);
+  background-color: #555;
+  margin: 0;
+  font-family: Monaco, sans-serif;
+}
+
+header{
+  background-image: url(img/tex.png);
+  background-color: #222;
+  padding: 20px 0;
+}
+
+header h1{
+  color: #ffffff;
+  font-size: 0.8em;
+  margin: 0 0 0.4em 0;
+}
+
+header h2{
+  color: #17c272;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+button {
+  background-image: url(img/tex.png);
+  background-color: #355183; /* blue */
+  display: block;
+  padding: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.6em;
+  font-family: Monaco, sans-serif;
+  text-shadow: 0 -2px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+}
+
+button:hover{
+  background-color: #1d62b2;
+
+}
+
+.logo{
+  background-image: url(img/tex.png);
+  background-color: #0F8A46; /* green */
+  margin: 0;
+  padding: 10px;
+  display: block;
+  box-shadow: inset 0 -3px 6px rgba(0,0,0,0.3);
+}
+
+.logo img{
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.wrapper{
+  max-width: 1000px;
+  min-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sidebar{
+  width: 30%;
+  float: left;
+}
+
+.calculator{
+  background-image: url(img/tex.png);
+  background-color: #aaa;
+  width: 65%;
+  max-width: 500px;
+  position: relative;
+  top: -60px;
+  float: right;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+
+.inner{
+  padding: 20px;
+}
+
+.main{
+  position: relative;
+}
+
+.main .sidebar{
+  color: #ccc;
+  font-size: 0.8em;
+}
+
+.answer_wrapper{
+  width: 75%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  float: left;
+}
+
+#answer, button{
+  height: 80px;
+  border-radius: 6px;
+}
+
+#answer {
+  background: url(img/bg5.jpg);
+  background-position: center center;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+  text-align: right;
+  line-height: 80px;
+  font-size: 1.4em;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.numbers {
+  width: 75%;
+  float: left;
+  clear: both;
+}
+
+.numbers div{
+  width: 33.333%;
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.operators {
+  width: 25%;
+  float: right;
+}
+
+#equals{
+  background-color: #b44e04; /* orange */
+}
+
+#equals:hover{
+  background-color: #cf4602; /* bright orange */
+}
+
+.numbers button{
+  color: #fff;
+}
+
+.clear{
+  background-color: #222;
+  color: white;
+  width: 25%;
+  float: right;
+  margin-bottom: 0;
+}
+
+.operators button {
+  background-color: #222;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  float: none;
+}
+
+.operators button:hover, .clear:hover {
+  background-color: #111;
+}
+
+

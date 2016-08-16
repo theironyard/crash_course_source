@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Demo 2: Mouse Events</title>
+    </head>
+    <body>
+        <h1>Demo 2: Mouse Events</h1>
+        <canvas id="stage" width="600" height="500"></canvas>
+
+        <script>
+            var canvas = document.getElementById( "stage" ),
+                ctx   = canvas.getContext( "2d" );
+
+            canvas.addEventListener( "mousemove", function( e ){
+
+                // console.log( e.offsetX, e.offsetY );
+                ctx.globalAlpha = 0.3;
+                ctx.beginPath();
+                ctx.fillStyle = "#ff0066";
+                ctx.arc( e.offsetX, e.offsetY, 20, 0, Math.PI*2, true );
+                ctx.closePath();
+                ctx.fill();
+            } );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Demo 1: Drawing shapes</title>
+    </head>
+    <body>
+        <h1>Demo 1: Drawing shapes</h1>
+        <canvas id="stage" width="600" height="500"></canvas>
+        
+        <script>
+            var canvas = document.getElementById( "stage" ),
+                ctx   = canvas.getContext( "2d" );
+
+            // Drawing a circle
+            ctx.beginPath();
+            ctx.fillStyle = "#ff0000";
+            ctx.arc( 300, 250, 50, 0, Math.PI*2, true );
+            ctx.closePath();
+            ctx.fill();
+
+            // Drawing a rectangle
+            ctx.beginPath();
+            ctx.strokeStyle = "00ff00";
+            ctx.rect( 100, 100, 200, 200 );
+            ctx.closePath();
+            ctx.stroke();
+
+            //draw a polygon
+            ctx.beginPath();
+            ctx.strokeStyle = "00ff66";
+            ctx.fillStyle = "#ff6600";
+            ctx.lineWidth = 10;
+            ctx.moveTo( 300, 460 );
+            ctx.lineTo( 371, 294 );
+            ctx.lineTo( 550, 230 );
+            ctx.lineTo( 480, 450 );
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+        </script>
+    </body>
+</html>

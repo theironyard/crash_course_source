@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Demo 3: Spiral</title>
+    </head>
+    <body>
+        <h1>Demo 3: Spiral</h1>
+        <canvas id="stage" width="600" height="500"></canvas>
+        <script>
+            var canvas   = document.getElementById( "stage" ),
+                ctx      = canvas.getContext( "2d" ),
+                rotation = 0,
+                x, y;
+                
+
+            var loop = function( timestamp ){
+
+                // Drawing a rectangle
+                ctx.globalAlpha = 0.01;
+                ctx.beginPath();
+                ctx.fillStyle = "#ffffff";
+                ctx.rect( 0, 0, canvas.width, canvas.height );
+                ctx.closePath();
+                ctx.fill();
+
+                //update the rotation angle
+                rotation += Math.PI / 60;
+
+                // find the x, y coordinants of an angle along the unit circle
+                x = Math.cos( rotation );
+                y = Math.sin( rotation );
+
+                // scale the coordinants to the desired magnitude
+                x *= 100;
+                y *= 100;
+
+                //translate the coordinants to the center of the canvas
+                x += 300;
+                y += 250;
+
+                //draw circle
+                ctx.globalAlpha = 0.5;
+                ctx.beginPath();
+                ctx.fillStyle = "#0066ff";
+                ctx.arc( x, y, 20, 0, Math.PI * 2, true );
+                ctx.closePath();
+                ctx.fill();
+
+                window.requestAnimationFrame( loop );
+            };
+
+            window.requestAnimationFrame( loop );
+        </script>
+    </body>
+</html>

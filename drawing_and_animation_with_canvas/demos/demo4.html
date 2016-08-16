@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Demo 3: Spiral</title>
+    </head>
+    <body>
+        <h1>Demo 3: Spiral</h1>
+        <canvas id="stage" width="600" height="500"></canvas>
+        <script>
+            var canvas    = document.getElementById( "stage" ),
+                ctx       = canvas.getContext( "2d" ),
+                rotation  = 0,
+                magnitude = 1,
+                dx        = 300,
+                dy        = 250,
+                color     = "#006666",
+                opacity   = 0.5,
+                interval  = Math.PI/10,
+                radius    = 20,
+                x,
+                y;
+                
+
+            var loop = function ( timestamp ){
+
+                // ctx.clearRect( 0, 0, canvas.width, canvas.height );
+                //Drawing a rectangle
+                ctx.globalAlpha = 0.01;
+                ctx.beginPath();
+                ctx.fillStyle = "#ffffff";
+                ctx.rect( 0, 0, canvas.width, canvas.height );
+                ctx.closePath();
+                ctx.fill();
+
+                //update the rotation angle
+                rotation += interval;
+                magnitude += 0.5;
+
+                // find the x, y coordinants of an angle along the unit circle
+                x = Math.cos( rotation );
+                y = Math.sin( rotation );
+
+                // scale the coordinants to the desired magnitude
+                x *= magnitude;
+                y *= magnitude;
+
+                //translate the coordinants to the center of the canvas
+                x += dx;
+                y += dy;
+
+                ctx.globalAlpha = opacity;
+                //draw circle
+                ctx.beginPath();
+                ctx.fillStyle = color;
+                ctx.arc( x, y, radius, 0, Math.PI*2, true );
+                ctx.closePath();
+                ctx.fill();
+
+                window.requestAnimationFrame( loop );
+            };
+
+            canvas.addEventListener( "click", function( e ){
+
+                dx = e.offsetX;
+                dy = e.offsetY;
+
+                magnitude = 1;
+                rotation  = 0;
+                opacity = Math.random() / 4;
+                interval = Math.PI / ( Math.random() * 100 );
+                radius = Math.floor( Math.random() * 20 ) + 10;
+
+                color = '#' + Math.floor( Math.random() * 16777215 ).toString( 16 );
+            } );
+
+            window.requestAnimationFrame( loop );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+body{
+    background: #444;
+    margin: 0;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+canvas{
+    background: white;
+    display: block;
+    margin: 0 auto;
+}
+
+nav{
+    width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    text-align: center;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    padding: 5px 0;
+}

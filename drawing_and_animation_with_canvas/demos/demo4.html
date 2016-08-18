@@ -2,10 +2,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style.css">
-        <title>Demo 3: Spiral</title>
+        <title>Demo 4: Spiral</title>
     </head>
     <body>
-        <h1>Demo 3: Spiral</h1>
+        <h1>Demo 4: Spiral</h1>
         <canvas id="stage" width="600" height="500"></canvas>
         <script>
             var canvas    = document.getElementById( "stage" ),
@@ -18,20 +18,9 @@
                 opacity   = 0.5,
                 interval  = Math.PI/10,
                 radius    = 20,
-                x,
-                y;
+                x, y;
                 
-
             var loop = function ( timestamp ){
-
-                // ctx.clearRect( 0, 0, canvas.width, canvas.height );
-                //Drawing a rectangle
-                ctx.globalAlpha = 0.01;
-                ctx.beginPath();
-                ctx.fillStyle = "#ffffff";
-                ctx.rect( 0, 0, canvas.width, canvas.height );
-                ctx.closePath();
-                ctx.fill();
 
                 //update the rotation angle
                 rotation += interval;

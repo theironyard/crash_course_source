@@ -1,12 +1,12 @@
 /*
-    Additional resets in addition
-    to normalize.css
+    Defaults and resets + normalize.css
 */
 .clearfix:after {
     content:" ";
     display:table;
     clear:both;
 }
+
 figure{
     margin: 0;
 }
@@ -32,50 +32,23 @@ a:hover{
     color: #eb8212;
 }
 
+/********************************************************
+*********************************************************
+*******     header styles and logo styles      **********
+*********************************************************/
+    
 
 
-/*
-    Header Content
-*/
-header{
-    background: #493e32;
-    box-shadow: inset 0 -10px 10px rgba(0,0,0,0.15);
-}
-header ul{
-    margin: 0 20px 0 0;
-    padding: 0;
-    list-style: none;
-    text-align: right;
-}
-header li{
-    display: inline-block;
-    padding-left: 10px;
-}
-header li a{
-    color: white;
-    display: block;
-    text-decoration: none;
-    padding-left: 20px;
-    height: 100px;
-    line-height: 100px;
-    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
-}
-.logo{
-    background: url('../img/logo.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    float: left;
-    margin: 0 0 0 20px;
-}
-.logo a{
-    color: white;
-    text-decoration: none;
-    font-size: 0.7em;
-    height: 100px;
-    line-height: 100px;
-    padding-left: 80px;
-    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
-}
+
+
+
+
+
+
+
+/********************************************************
+*********************************************************
+*********************************************************/
 
 
 
@@ -119,32 +92,23 @@ header li a{
 
 
 
-/*
-    Featured area card
-*/
-.hero-banner{
-    background-image: url('../img/featured_bg.jpg');
-    background-position: center center;
-    padding: 20px;
-    height: 230px;
-}
-.card{
-    background: white;
-    padding: 20px 40px 40px;
-    width: 40%;
-    margin-left: 50.5%;
-    box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.3 );
-    text-align: center;
-    border-radius: 5px;
-}
-.card h1{
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 1.6em;
-}
-.card p{
-    margin: 0.3em 0 1em 0;
-}
+/********************************************************
+*********************************************************
+*******     hero-banner code starts here      ***********
+*********************************************************/
+    
+
+
+
+
+
+
+
+
+
+/********************************************************
+*********************************************************
+*********************************************************/
 
 
 

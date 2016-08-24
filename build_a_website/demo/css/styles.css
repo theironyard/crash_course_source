@@ -1,0 +1,253 @@
+/*
+    Additional resets in addition
+    to normalize.css
+*/
+.clearfix:after {
+    content:" ";
+    display:table;
+    clear:both;
+}
+figure{
+    margin: 0;
+}
+body{
+    margin: 0;
+    font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    background: url('../img/bg.jpg');
+    color: #493e32;
+}
+
+img{
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+a{
+    color: #ff6c6c;
+}
+
+a:hover{
+    color: #eb8212;
+}
+
+
+
+/*
+    Header Content
+*/
+header{
+    background: #493e32;
+    box-shadow: inset 0 -10px 10px rgba(0,0,0,0.15);
+}
+header ul{
+    margin: 0 20px 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+header li{
+    display: inline-block;
+    padding-left: 10px;
+}
+header li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+    height: 100px;
+    line-height: 100px;
+    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+.logo{
+    background: url('../img/logo.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 0 0 0 20px;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.7em;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 80px;
+    text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+
+
+
+/*
+    Site wrapper for centering
+*/
+.wrapper{
+    width: 900px;
+    background: white;
+    margin: 0 auto 100px auto;
+    border-radius: 12px;
+    overflow:  hidden;
+    margin-top: 20px;
+    box-shadow: 0 6px 6px rgba( 0, 0 ,0, 0.2 );
+}
+
+
+
+/*
+    Button styles
+*/
+.btn{
+    display: inline-block;
+    padding: 8px 32px;
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 -1px 1px rgba( 0,0,0,0.3 );
+    background: linear-gradient( 0deg, #03b53a, #03d04c );
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    outline: none;
+}
+.btn:hover{
+    background: linear-gradient( 0deg, #b85a0b, #eb8212 );
+    color: white;
+}
+
+
+
+/*
+    Featured area card
+*/
+.hero-banner{
+    background-image: url('../img/featured_bg.jpg');
+    background-position: center center;
+    padding: 20px;
+    height: 230px;
+}
+.card{
+    background: white;
+    padding: 20px 40px 40px;
+    width: 40%;
+    margin-left: 50.5%;
+    box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.3 );
+    text-align: center;
+    border-radius: 5px;
+}
+.card h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+.card p{
+    margin: 0.3em 0 1em 0;
+}
+
+
+
+/*
+    Main content area, Hero and paragraph text
+*/
+.main{
+    padding: 20px;
+}
+.main .why-knot{
+    width: 50%;
+    float: left;
+}
+.why-knot h2{
+    margin-top: 0;
+}
+.main figure{
+    width: 45%;
+    float: right;
+}
+
+
+
+
+/*
+    Footer stuff
+*/
+footer{
+    clear: both;
+    background: #493e32;
+    padding: 20px 0 0 20px;
+    margin:  20px;
+    border-radius: 6px;
+}
+
+footer a:hover{
+    color: #03d04c;
+}
+
+.contact{
+    color: white;
+    width: 20%;
+    float: right;
+    padding-right: 10%;
+}
+.contact h2{
+    margin: 0;
+}
+.contact ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.contact li{
+    font-size: 0.8em;
+}
+
+
+/*
+    Changable donut image
+*/
+.animation{
+    float: left;
+}
+.animation figure{
+    width: 401px;
+    height: 317px;
+    overflow: hidden;
+    position: relative;
+}
+.animation img{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.donut_controls{
+    padding: 20px 0;
+}
+.donut_controls .btn{
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+    margin-bottom: 6px;
+    font-size: 0.8em;
+}
+
+
+/*
+    CSS for hiding and showing donut images,
+    Paired with the javascript in main.js
+*/
+img.plain,
+img.stripes,
+img.sprinkles{
+    z-index: 100;
+    display: none;
+}
+.plain img.plain,
+.stripes img.stripes,
+.sprinkles img.sprinkles{
+    z-index: 300;
+    display: block;
+}

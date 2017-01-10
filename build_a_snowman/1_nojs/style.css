@@ -1,0 +1,220 @@
+/*
+    Apply a natural box layout model to all elements,
+    but allowing components to change
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-image: url("img/sitebg2.jpg");
+    background-size: 200px;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+h1{
+    color: white;
+    right: 0;
+    width: 40%;
+    font-size: 2.2em;
+    line-height: 2.2em;
+    top: 10%;
+    font-weight: 100;
+    text-shadow: 0 7px 7px rgba(0,0,0,0.5);
+    transform: skewY(-10deg);
+}
+
+h1 span{
+    display: block;
+    font-size: 2.3em;
+}
+
+/* The frame holding all imagery */
+.frame{
+    background: url('img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    top: 30px;
+    border-radius: 6px;
+    width: 1000px;
+    padding-top: 660px;
+    margin: 0 auto;
+    border: 2px solid rgba(255,255,255,0.35);
+}
+
+/* Makes it easier to position elements on top of one another */
+.snowman div,
+h1,
+a{
+    position: absolute;
+}
+
+/* Styles for the stacked snowballs */
+.snowball{
+    background: url('img/snowball.png');
+    background-size: cover;
+    bottom: 80%;
+    left: 15%;
+    width: 70%;
+    padding-top: 70%;
+    z-index: 100;
+}
+
+.snowman > .snowball{
+    bottom: 60px;
+    width: 260px;
+    height: 260px;
+    padding-top: 0;
+}
+
+/* Styles for the shadow beneath the snowman */
+.shadow{
+    position: absolute;
+    background: url('img/shadow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 15%;
+    width: 260px;
+    height: 100px;
+    padding-top: 0;
+}
+
+/* Style for all three faces */
+.face{
+    width: 130%;
+    padding-top: 80%;
+    top: 15%;
+    left: -5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
+
+/* Classic face (with carrot) */
+#face1{
+    background-image: url('img/face1.png');
+}
+
+/* Rope mouth */
+#face2{
+    background-image: url('img/face2.png');
+}
+
+/* Funny glasses */
+#face3{
+    background-image: url('img/face3.png');
+}
+
+/* Styles for all three arms sets */
+.arm{
+    width: 300%;
+    padding-top: 90%;
+    top: -5%;
+    left: -90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
+
+/* Branches 1 */
+#arm1{
+    background-image: url('img/arm1.png');
+}
+
+/* Branches 2 */
+#arm2{
+    background-image: url('img/arm2.png');
+}
+
+/* Broom */
+#arm3{
+    background-image: url('img/arm3.png');
+}
+
+
+/* Hat */
+#dec1{
+    background-image: url('img/dec1.png');
+    display: none;
+    width: 100%;
+    padding-top: 100%;
+    top: -56%;
+    left: -19%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 150;
+}
+
+/* Scarf */
+#dec2{
+    background-image: url('img/dec2.png');
+    display: none;
+    width: 82%;
+    padding-top: 82%;
+    top: 0;
+    left: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 150;
+}
+
+/* Buttons */
+#dec3{
+    background-image: url('img/dec3.png');
+    display: none;
+    width: 20%;
+    padding-top: 60%;
+    top: 28%;
+    left: 55%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 120;
+}
+
+#dec1.active,
+#dec2.active,
+#dec3.active{
+    display: block;
+}
+
+.button{
+    color: white;
+    text-align: center;
+    font-family: "Helvetica Nueue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    right: 15%;
+    bottom: 43%;
+    display: inline-block;
+    padding: 1em;
+    text-shadow: 0 -2px 1px rgba(0,0,0,0.2);
+    background: #008a00;
+
+    background: -moz-linear-gradient(top,  #008a00 0%, #008a00 50%, #005700 100%);
+    background: -webkit-linear-gradient(top,  #008a00 0%,#008a00 50%,#005700 100%);
+    background: linear-gradient(to bottom,  #008a00 0%,#008a00 50%,#005700 100%);
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+.button:hover{
+    background: #ff3019;
+    background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%);
+    background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%);
+    background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%);
+}
+
+
+
+
+
+
+
+

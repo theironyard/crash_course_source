@@ -1,0 +1,202 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    background-image: url("img/sitebg2.jpg");
+    background-size: 200px;
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+}
+
+h1{
+    color: white;
+    right: 0;
+    /* background-color: green; */
+    width: 40%;
+    font-size: 2.2em;
+    line-height: 2.2em;
+    top: 10%;
+    font-weight: 100;
+    text-shadow: 0 7px 7px rgba(0,0,0,0.5);
+    transform: skewY(-10deg);
+}
+
+h1 span{
+    display: block;
+    font-size: 2.3em;
+}
+
+.frame{
+    background: url('img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    top: 30px;
+    border-radius: 6px;
+    width: 1000px;
+    padding-top: 660px;
+    margin: 0 auto;
+    border: 2px solid rgba(255,255,255,0.35);
+}
+
+.snowman div, h1, a{
+    position: absolute;
+}
+
+.snowball{
+    background: url('img/snowball.png');
+    background-size: cover;
+    bottom: 80%;
+    left: 15%;
+    width: 70%;
+    padding-top: 70%;
+    z-index: 100;
+}
+
+.snowman > .snowball{
+    bottom: 60px;
+    width: 260px;
+    height: 260px;
+    padding-top: 0;
+}
+
+.shadow{
+    position: absolute;
+    background: url('img/shadow.png');
+    background-repeat: no-repeat;
+    /* background-color: rgba(0,0,255,0.3); */
+    background-size: contain;
+    bottom: 0;
+    left: 15%;
+    width: 260px;
+    height: 100px;
+    padding-top: 0;
+}
+
+.face{
+    /* background-color: rgba(0,0,255,0.3); */
+    width: 130%;
+    padding-top: 80%;
+    top: 15%;
+    left: -5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
+#face1{
+    background-image: url('img/face1.png');
+}
+#face2{
+    background-image: url('img/face2.png');
+}
+#face3{
+    background-image: url('img/face3.png');
+}
+
+.arm{
+    /* background-color: rgba(0,255,0,0.3); */
+    width: 300%;
+    padding-top: 90%;
+    top: -5%;
+    left: -90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
+#arm1{
+    background-image: url('img/arm1.png');
+}
+#arm2{
+    background-image: url('img/arm2.png');
+}
+#arm3{
+    background-image: url('img/arm3.png');
+}
+
+#dec1{
+    /* background-color: rgba(0,255,0,0.3); */
+    background-image: url('img/dec1.png');
+    display: none;
+    width: 100%;
+    padding-top: 100%;
+    top: -56%;
+    left: -19%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 150;
+}
+
+#dec2{
+    /* background-color: rgba(0,255,0,0.3); */
+    background-image: url('img/dec2.png');
+    display: none;
+    width: 82%;
+    padding-top: 82%;
+    top: 0;
+    left: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 150;
+}
+
+#dec3{
+    /* background-color: rgba(0,255,0,0.3); */
+    background-image: url('img/dec3.png');
+    display: none;
+    width: 20%;
+    padding-top: 60%;
+    top: 28%;
+    left: 55%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 120;
+}
+
+#dec1.active,
+#dec2.active,
+#dec3.active{
+    display: block;
+}
+
+.button{
+    color: white;
+    text-align: center;
+    font-family: "Helvetica Nueue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-decoration: none;
+    right: 15%;
+    bottom: 43%;
+    display: inline-block;
+    padding: 1em;
+    text-shadow: 0 -2px 1px rgba(0,0,0,0.2);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#008a00+0,008a00+50,005700+100 */
+    background: #008a00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #008a00 0%, #008a00 50%, #005700 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #008a00 0%,#008a00 50%,#005700 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #008a00 0%,#008a00 50%,#005700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008a00', endColorstr='#005700',GradientType=0 ); /* IE6-9 */
+
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+.button:hover{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+100;Red+3D */
+    background: #ff3019; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+
+
+
+
